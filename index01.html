@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maicon Melo Móveis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Cinzel', serif;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 60px;
+      z-index: 10;
+    }
+
+    header a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      margin-left: 30px;
+      transition: opacity 0.3s;
+    }
+
+    header a:hover {
+      opacity: 0.7;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: 4px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: fade 24s infinite;
+    }
+
+    .slide:nth-child(1) {
+      background-image: url('IMG_1579.jpeg');
+      animation-delay: 0s;
+    }
+
+    .slide:nth-child(2) {
+      background-image: url('IMG_1580.jpeg');
+      animation-delay: 8s;
+    }
+
+    .slide:nth-child(3) {
+      background-image: url('IMG_1581.jpeg');
+      animation-delay: 16s;
+    }
+
+    @keyframes fade {
+      0% { opacity: 0; }
+      8% { opacity: 1; }
+      25% { opacity: 1; }
+      33% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    section {
+      width: 100%;
+      height: 100vh;
+      padding: 100px 20px 40px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section#sobre,
+    section#portfolio,
+    section#contato {
+      background-color: #f5f5f5;
+      color: #111;
+    }
+
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    section#sobre p {
+      max-width: 800px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      width: 100%;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Formulário de Contato */
+    #contato p, #contato a {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    form {
+      max-width: 800px;
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #aaa;
+      padding: 10px;
+      background: transparent;
+      font-family: 'Cinzel', serif;
+      margin-bottom: 20px;
+    }
+
+    form button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #111;
+      color: #fff;
+      font-family: 'Cinzel', serif;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero" id="inicio">
+    <div class="slider">
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+    </div>
+    <header>
+      <a href="#inicio" class="logo">Maicon Melo Móveis</a>
+      <nav class="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+        <a href="#memorias">"Memórias do Lar"</a>
+      </nav>
+    </header>
+  </div>
+
+  <section id="sobre">
+    <h2>Sobre a Maicon Melo Móveis</h2>
+    <p>
+      A Maicon Melo Móveis transforma espaços com móveis sob medida e projetos planejados, pensados para atender às necessidades e ao estilo dos seus clientes. Com um olhar cuidadoso para cada detalhe, compartilhamos no Instagram o dia a dia das obras, mostrando o passo a passo da criação de ambientes únicos e funcionais. Atendemos a região com dedicação e soluções que combinam estética, qualidade e personalização.
+    </p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfólio</h2>
+    <div class="galeria">
+      <img src="IMG_1579.jpeg" alt="Projeto 2">
+      <img src="IMG3.jpg" alt="Projeto 3">
+      <img src="IMG2.jpg" alt="Projeto 5">
+      <img src="IMG_1580.jpeg" alt="Projeto 6">
+      <img src="IMG_1581.jpeg" alt="Projeto 7">
+      <img src="IMG_1582.jpeg" alt="Projeto 8">
+      <img src="IMG_1579.jpeg" alt="Projeto 5">
+      <img src="IMG_1583.jpeg" alt="Projeto 5">
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Entre em Contato</h2>
+    <p>
+      Se você deseja colaborar com Maicon Melo Móveis em um projeto, preencha o formulário abaixo e nossa equipe entrará em contato.
+    </p>
+    <p style="margin-top: 20px;">
+      <strong>Maicon Melo Móveis</strong><br>
+      <a href="mailto:maiconmelomoveis@gmail.com">maiconmelomoveis@gmail.com</a><br>
+      (19) 9 9999-9999<br>
+      <a href="https://www.instagram.com/maiconmelomoveis/" target="_blank">@maiconmelomoveis</a>
+    </p>
+    <form>
+      <input type="text" placeholder="Nome*" required>
+      <input type="email" placeholder="Email*" required>
+      <input type="text" placeholder="Telefone*" required>
+      <input type="text" placeholder="Endereço do Projeto*" required>
+      <textarea rows="4" placeholder="Mensagem"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</body>
+
+</html>
